@@ -156,14 +156,15 @@ define(function() {
 
   Layer.prototype.applyColormap = function (colormap, grayscale) {
     var data = this.imageData.data;
+    // alert(data.length)
     if (typeof grayscale === "undefined") grayscale = true;
     for (var i = 0; i < data.length; i += 4) {
       var index = data[i];
       if (!grayscale)
         index |= (data[i + 1] << 8) | (data[i + 2] << 16);
-      data[i + 0] = colormap[index][0];
-      data[i + 1] = colormap[index][1];
-      data[i + 2] = colormap[index][2];
+      data[i + 0] = colormap[index%colormap.length][0];
+      data[i + 1] = colormap[index%colormap.length][1];
+      data[i + 2] = colormap[index%colormap.length][2];
     }
     return this;
   };

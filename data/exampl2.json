@@ -1,0 +1,36 @@
+{
+  "labels": [
+    "背景",
+    "大杆菌",
+    "弧菌",
+    "短杆菌",
+    "链球菌",
+    "阳性杆菌",
+    "阳性球菌"
+  ],
+  "imageURLs": [
+    "data/images/T1.JPG",
+    "data/images/T2.JPG",
+    "data/images/T3.JPG",
+    "data/images/T4.JPG",
+    "data/images/T5.JPG",
+    "data/images/T6.JPG",
+    "data/images/T7.JPG",
+    "data/images/T8.JPG",
+    "data/images/T9.JPG",
+    "data/images/T10.JPG",
+    "data/images/T11.JPG",
+    "data/images/T12.JPG",
+    "data/images/T13.JPG",
+    "data/images/T14.JPG",
+    "data/images/T15.JPG",
+    "data/images/T16.JPG",
+    "data/images/T17.JPG",
+    "data/images/T18.JPG",
+    "data/images/T19.JPG",
+    "data/images/T20.JPG"
+  ],
+  "annotationURLs": [
+
+  ]
+}
