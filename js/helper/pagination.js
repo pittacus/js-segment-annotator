@@ -33,7 +33,7 @@ function (util) {
         anchor = document.createElement("a");
         if (page > 0)
           anchor.href = util.makeQueryParams(params, { page: page - 1 });
-        anchor.appendChild(document.createTextNode("Prev"));
+        anchor.appendChild(document.createTextNode("上一页"));
         container.appendChild(anchor);
         container.appendChild(document.createTextNode(" "));
       }
@@ -51,7 +51,7 @@ function (util) {
         anchor = document.createElement("a");
         if (page < pages - 1)
           anchor.href = util.makeQueryParams(params, { page: page + 1 });
-        anchor.appendChild(document.createTextNode("Next"));
+        anchor.appendChild(document.createTextNode("下一页"));
         container.appendChild(anchor);
       }
       return container;

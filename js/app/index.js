@@ -10,7 +10,7 @@ function(Pagination, Viewer, util) {
         option;
     {
       option = document.createElement("option");
-      option.appendChild(document.createTextNode("all"));
+      option.appendChild(document.createTextNode("全部"));
       select.appendChild(option);
     }
     for (var i = 0; i < labels.length; ++i) {
@@ -23,7 +23,7 @@ function(Pagination, Viewer, util) {
     }
     select.onchange = function(event) {
       window.location = util.makeQueryParams(params, {
-        label: (event.target.value === "all") ? null : event.target.value
+        label: (event.target.value === "全部") ? null : event.target.value
       });
     };
     container.appendChild(select);

@@ -22,9 +22,9 @@ function(Layer, Annotator, util) {
     var id = parseInt(params.id, 10),
         container = document.createElement("div"),
         indexAnchor = document.createElement("a"),
-        indexAnchorText = document.createTextNode("Index"),
-        prevAnchorText = document.createTextNode("Prev"),
-        nextAnchorText = document.createTextNode("Next"),
+        indexAnchorText = document.createTextNode("图像列表"),
+        prevAnchorText = document.createTextNode("前一图像"),
+        nextAnchorText = document.createTextNode("后一图像"),
         prevAnchor, nextAnchor;
     indexAnchor.href = util.makeQueryParams({ view: "index" });
     indexAnchor.appendChild(indexAnchorText);
@@ -280,18 +280,18 @@ function(Layer, Annotator, util) {
     spacer4.className = "edit-sidebar-spacer";
     container.className = "edit-sidebar";
     container.appendChild(labelPicker);
-    container.appendChild(spacer1);
-    container.appendChild(undoButton);
-    container.appendChild(redoButton);
-    container.appendChild(spacer2);
-    container.appendChild(denoiseButton);
-    container.appendChild(spacer3);
-    container.appendChild(polygonToolButton);
-    container.appendChild(superpixelToolButton);
-    container.appendChild(brushToolButton);
-    container.appendChild(manualParagraph);
+    // container.appendChild(spacer1);
+    // container.appendChild(undoButton);
+    // container.appendChild(redoButton);
+    // container.appendChild(spacer2);
+    // container.appendChild(denoiseButton);
+    // container.appendChild(spacer3);
+    // container.appendChild(polygonToolButton);
+    // container.appendChild(superpixelToolButton);
+    // container.appendChild(brushToolButton);
+    // container.appendChild(manualParagraph);
     //container.appendChild(spacer4);
-    container.appendChild(exportButton);
+    // container.appendChild(exportButton);
     return container;
   }
 
