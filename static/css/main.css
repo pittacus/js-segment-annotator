@@ -130,25 +130,26 @@
 }
 .edit-sidebar-submit {
   margin-left: 1em;
+  width: 3em;
 }
 .edit-image-top-menu {
-  height: 1em;
+  //height: 1em;
   font-family: monospace;
+  display: block;
+  float: left;
 }
 .edit-image-top-menu-item {
-  display: inline-block;
+  display: block;
   background-color: #eee;
   padding: 0 2px;
   min-width: 1em;
-  text-align: center;
+  text-align: left;
 }
 .edit-image-top-button {
-  display: inline-block;
+  display: block;
+  position: relative;
   background-color: #eee;
   cursor: pointer;
-  padding: 0 2px;
-  min-width: 1em;
-  text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

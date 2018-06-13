@@ -77,7 +77,7 @@ function(Layer, Annotator, util) {
     sidebarContainer.appendChild(sidebarSpacer);
     sidebarContainer.appendChild(sidebar);
     container.className = "edit-main-container";
-    container.appendChild(imageContainer);
+    // container.appendChild(imageContainer);
     container.appendChild(annotatorContainer);
     container.appendChild(sidebarContainer);
     return container;
@@ -96,12 +96,12 @@ function(Layer, Annotator, util) {
         alphaMinusButton = document.createElement("div"),
         imageButton = document.createElement("div"),
         alphaPlusButton = document.createElement("div");
-    zoomOutButton.appendChild(document.createTextNode("-"));
+    zoomOutButton.appendChild(document.createTextNode("［缩小图像 - ］"));
     zoomOutButton.classList.add("edit-image-top-button");
     zoomOutButton.addEventListener("click", function () {
       annotator.zoomOut();
     });
-    zoomInButton.appendChild(document.createTextNode("zoom +"));
+    zoomInButton.appendChild(document.createTextNode("［放大图像 + ］"));
     zoomInButton.classList.add("edit-image-top-button");
     zoomInButton.addEventListener("click", function () {
       annotator.zoomIn();
@@ -109,7 +109,7 @@ function(Layer, Annotator, util) {
     spacer1.className = "edit-image-top-spacer";
     boundaryButton.id = "boundary-button";
     boundaryButton.className = "edit-image-top-button";
-    boundaryButton.appendChild(document.createTextNode("boundary"));
+    boundaryButton.appendChild(document.createTextNode("切换辅助显示"));
     boundaryButton.addEventListener("click", function () {
       if (boundaryFlashTimeoutID)
         window.clearTimeout(boundaryFlashTimeoutID);
@@ -119,13 +119,13 @@ function(Layer, Annotator, util) {
         annotator.show("boundary");
       boundaryButton.classList.toggle("edit-image-top-button-enabled");
     });
-    finerButton.appendChild(document.createTextNode("-"));
+    finerButton.appendChild(document.createTextNode("［小尺寸辅助区域 － ］"));
     finerButton.className = "edit-image-top-button";
     finerButton.addEventListener("click", function () {
       annotator.finer();
       boundaryFlash();
     });
-    coarserButton.appendChild(document.createTextNode("+"));
+    coarserButton.appendChild(document.createTextNode("［大尺寸辅助区域 ＋ ］"));
     coarserButton.className = "edit-image-top-button";
     coarserButton.addEventListener("click", function () {
       annotator.coarser();
@@ -133,13 +133,13 @@ function(Layer, Annotator, util) {
     });
     spacer2.className = "edit-image-top-spacer";
     alphaMinusButton.className = "edit-image-top-button";
-    alphaMinusButton.appendChild(document.createTextNode("-"));
+    alphaMinusButton.appendChild(document.createTextNode("［标注可见度 ＋ ］"));
     alphaMinusButton.addEventListener("click", function () {
       annotator.moreAlpha();
     });
     imageButton.className = "edit-image-top-button " +
                             "edit-image-top-button-enabled";
-    imageButton.appendChild(document.createTextNode("image"));
+    imageButton.appendChild(document.createTextNode("［切换标注显示］"));
     imageButton.addEventListener("click", function () {
       if (imageButton.classList.contains("edit-image-top-button-enabled"))
         annotator.hide("image");
@@ -148,7 +148,7 @@ function(Layer, Annotator, util) {
       imageButton.classList.toggle("edit-image-top-button-enabled");
     });
     alphaPlusButton.className = "edit-image-top-button";
-    alphaPlusButton.appendChild(document.createTextNode("+"));
+    alphaPlusButton.appendChild(document.createTextNode("［底图可见度 ＋ ］"));
     alphaPlusButton.addEventListener("click", function () {
       annotator.lessAlpha();
     });
